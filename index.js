@@ -1,16 +1,27 @@
 const express = require('express');
 const app = express();
 
+const movieRoutes = require('./routes/Movie.routes');
+
 const PORT = 3000;
 
 const router = express.Router();
 
 app.use('/', router);
+app.use('/movies', movieRoutes);
 
 router.get('/', (req, res) => {
-
     res.send('Hola cara de bola!!!!')
 });
+
+app.use('*', (req, res, next) => {
+    const err = new Error('No encontramos la ruta que solicita, disculpe');
+    return res.status(404).send(err.message);
+});
+
+app.use((error, req, res, next) => {
+    return res.status(error.status || 500).json(error.message || "Unespected error");
+})
 
 app.listen(PORT, () => {
     console.log(`Servidor a tope con la cope en http://localhost:${PORT}`);
