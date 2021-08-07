@@ -1,0 +1,19 @@
+{
+  "name": "new",
+  "version": "1.0.0",
+  "description": "Proyect nodeJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trigo155/CineSum.git"
+  },
+  "author": "JJTrigo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trigo155/CineSum/issues"
+  },
+  "homepage": "https://github.com/trigo155/CineSum#readme"
+}
