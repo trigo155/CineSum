@@ -1,19 +1,24 @@
 {
-  "name": "new",
-  "version": "1.0.0",
-  "description": "Proyect nodeJs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trigo155/CineSum.git"
-  },
-  "author": "JJTrigo",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/trigo155/CineSum/issues"
-  },
-  "homepage": "https://github.com/trigo155/CineSum#readme"
+    "name": "new",
+    "version": "1.0.0",
+    "description": "Proyect nodeJs",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/trigo155/CineSum.git"
+    },
+    "author": "JJTrigo",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/trigo155/CineSum/issues"
+    },
+    "homepage": "https://github.com/trigo155/CineSum#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "nodemon": "^2.0.12"
+    }
 }
