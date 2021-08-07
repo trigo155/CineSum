@@ -1,9 +1,14 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
+dotenv.config();
+
+const db = require('./config/db');
+db.connect();
 
 const movieRoutes = require('./routes/Movie.routes');
 
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 const router = express.Router();
 
