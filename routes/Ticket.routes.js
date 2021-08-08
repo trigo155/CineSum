@@ -7,7 +7,7 @@ const controller = require('../controllers/ticket.controller');
 
 router.get('/', controller.getTickets);
 
-// router.post('/create', controller.createTickets);
+router.post('/create', controller.createTickets);
 
 // router.put('/edit-ticket', controller.ediTickets);
 
