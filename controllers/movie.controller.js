@@ -76,7 +76,7 @@ const deleteMovies = async(req, res, next) => {
 const findMovie = async(req, res, next) => {
     try {
         const { name } = req.params;
-        const movies = await Movies.find({ title: { '$regex': name, '$options': 'i' } })
+        const movies = await Movies.find({ title: { '$regex': name, '$options': 'i' } });
 
         if (movies.length === 0) {
             const error = new Error('Película no encontrada');
