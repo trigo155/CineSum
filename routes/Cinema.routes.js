@@ -10,4 +10,8 @@ router.post('/create-cinema', controller.createCinema);
 
 router.put('/add-movie', controller.addMovie);
 
+router.delete('/delete-cinema', controller.deleteCinema);
+
+
+
 module.exports = router;
