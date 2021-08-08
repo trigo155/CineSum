@@ -12,6 +12,9 @@ const PORT = process.env.PORT;
 
 const router = express.Router();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use('/', router);
 app.use('/movies', movieRoutes);
 
