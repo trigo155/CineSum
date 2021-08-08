@@ -7,6 +7,8 @@ const db = require('./config/db');
 db.connect();
 
 const movieRoutes = require('./routes/Movie.routes');
+const cinemaRoutes = require('./routes/Cinema.routes');
+const ticketsRoutes = require('./routes/Ticket.routes');
 
 const PORT = process.env.PORT || 3000;
 
@@ -17,6 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/', router);
 app.use('/movies', movieRoutes);
+app.use('/cinema', cinemaRoutes);
+app.use('/tickets', ticketsRoutes);
 
 router.get('/', (req, res) => {
     res.send('Hola cara de bola!!!!')
