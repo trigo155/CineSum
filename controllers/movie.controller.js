@@ -72,6 +72,7 @@ const deleteMovies = async(req, res, next) => {
     };
 };
 
+
 const findMovie = async(req, res, next) => {
     try {
         const { name } = req.params;
@@ -84,8 +85,9 @@ const findMovie = async(req, res, next) => {
         return res.status(200).json(movies);
 
     } catch (error) {
-        return res.status(500).json(error.message);
+        return next(error);
     }
-}
+};
+
 
 module.exports = { getMovies, createMovies, editMovies, deleteMovies, findMovie };
