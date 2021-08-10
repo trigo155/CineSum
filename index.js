@@ -6,25 +6,30 @@ dotenv.config();
 const db = require('./config/db');
 db.connect();
 
+const path = require('path');
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+
 const movieRoutes = require('./routes/Movie.routes');
 const cinemaRoutes = require('./routes/Cinema.routes');
 const ticketsRoutes = require('./routes/Ticket.routes');
+const indexRoutes = require('./routes/Index.routes');
 
 const PORT = process.env.PORT || 3000;
 
-const router = express.Router();
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/', router);
+
+app.use('/', indexRoutes);
 app.use('/movies', movieRoutes);
 app.use('/cinema', cinemaRoutes);
 app.use('/tickets', ticketsRoutes);
 
-router.get('/', (req, res) => {
-    res.send('Hola cara de bola!!!!')
-});
+
 
 app.use('*', (req, res, next) => {
     const err = new Error('No encontramos la ruta que solicita, disculpe');
