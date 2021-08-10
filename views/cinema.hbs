@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cines</title>
+</head>
+<body>
+    <a href="/">Inicio</a>
+
+{{#each cinema}}
+
+        <h2>Cine: {{name}}</h2>
+        <h3>Ubicación{{ubication}}</h3>
+        <h3>Capacidad{{capacity}}</h3>
+        <h3>Horario{{horary}}</h3>
+        <h3>Película{{movie}}</h3>
+        
+        <hr/>
+
+    {{/each}} 
+
+    
+</body>
+</html>

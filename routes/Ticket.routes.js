@@ -9,9 +9,9 @@ router.get('/', controller.getTickets);
 
 router.post('/create', controller.createTickets);
 
-// router.put('/edit-ticket', controller.ediTickets);
+router.delete('/delete-ticket', controller.deleteTicket);
 
-// router.delete('/delete-ticket', controller.deleteTickets);
+
 
 
 
